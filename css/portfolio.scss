@@ -14,8 +14,27 @@ header {
   }
 }
 
+body {
+  background-color: ivory;
+}
+
+.popup_help_window {
+  max-width: 300px;
+  position: absolute;
+  padding: 6px 15px;
+  background-color: rgb(255, 241, 188);
+  border: 3px double #ccc;
+  display: none;
+  color: #63f;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5em;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #ccc;
+}
 
 .page {
+  background-color: red;
   .box {
     visibility: hidden;
 
@@ -64,7 +83,11 @@ header {
 
         align-items: center;
 
+        z-index: 2;
+
         .box3 {
+          z-index: 1;
+
           visibility: hidden;
 
           background-color: white;
@@ -94,6 +117,9 @@ header {
             .top-name {
               font-size: 75px;
               font-weight: bold;
+              text-align: center;
+              padding: 0;
+              margin: 0;
             }
             .top-ex {
               text-align: center;
@@ -106,6 +132,7 @@ header {
                 padding-top: 3em;
                 color: skyblue;
                 cursor: pointer;
+                text-align: center;
                 &:hover {
                   color: navy;
                 }
@@ -129,53 +156,55 @@ header {
             }
           }
         }
-        .skill-box {
-          @include flex-direction(column);
-          width: 100%;
-          display: -webkit-flex;
-          display: flex;
+        .skill-content {
+          text-align: center;
+          .skill-box {
+            @include flex-direction(column);
+            width: 100%;
+            display: -webkit-flex;
+            display: flex;
 
-          @include flex-direction(row);
+            @include flex-direction(row);
 
-          justify-content: center;
+            justify-content: center;
 
-          >div {
-            width: 25%;
-            text-align: center;
-
-            position: relative;
-            margin: 1em 1em;
-            padding: 0.5em 1em;
-            border: solid 3px #95ccff;
-            border-radius: 8px;
-            span {
-              position: absolute;
-              top: -13px;
-              left: 10px;
-              padding: 0 9px;
-              line-height: 1;
-              font-size: 19px;
-              background: #FFF;
-              color: #95ccff;
-              font-weight: bold;
-            }
-            .program {
-              display: inline-block;
+            >div {
+              width: 25%;
               text-align: center;
-              p {
-                text-align: center;
-                margin: 0;
-                padding: 0;
+
+              position: relative;
+              margin: 1em 1em;
+              padding: 0.5em 1em;
+              border: solid 3px #95ccff;
+              border-radius: 8px;
+              span {
+                position: absolute;
+                top: -13px;
+                left: 10px;
+                padding: 0 9px;
+                line-height: 1;
+                font-size: 19px;
+                background: #FFF;
+                color: #95ccff;
+                font-weight: bold;
               }
-              img {
-                vertical-align: top;
+              .program {
+                display: inline-block;
+                text-align: center;
+                p {
+                  text-align: center;
+                  margin: 0;
+                  padding: 0;
+                }
+                img {
+                  vertical-align: top;
+                }
               }
             }
           }
         }
       }
     }
-
   }
 }
 
@@ -203,6 +232,60 @@ header {
       top: 45%;
       position: fixed;
       padding-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .page {
+    header {
+      ul {
+        padding-top: 20px;
+        writing-mode: lr-tb;
+        position: fixed;
+        width: 100%;
+        li {
+          text-align: center;
+          float: left;
+          width: 20%;
+          padding-top: 10px;
+          font-size: 25px;
+        }
+      }
+    }
+    .box {
+      .wrapper {
+        .box2 {
+          .box3 {
+            .top-content {
+              -ms-writing-mode: tb-rl;
+              writing-mode: vertical-rl;
+              -webkit-text-orientation: upright;
+            }
+            .profile-content {
+              -ms-writing-mode: tb-rl;
+              writing-mode: vertical-rl;
+              -webkit-text-orientation: upright;
+            }
+            .skill-content {
+              .skill-box {
+                @include flex-direction(column);
+                >div {
+                  width: 80%;
+                  text-align: center;
+                }
+              }
+            }
+            .portfolio-content {
+              text-align: center;
+              width: 100%;
+              @include flex-direction(column);
+              columns: 2;
+              .Portfolio_item {}
+            }
+          }
+        }
+      }
     }
   }
 }
