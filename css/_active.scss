@@ -1,0 +1,12 @@
+.page {
+  .box {
+    .wrapper {
+      .active {
+        visibility: visible;
+        .active {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

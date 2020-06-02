@@ -1,0 +1,48 @@
+.skill-content {
+  text-align: center;
+  .skill-box {
+    @include flex-direction(column);
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+
+    @include flex-direction(row);
+    text-align: center;
+
+    justify-content: center;
+
+    >div {
+      width: 25%;
+      text-align: center;
+
+      position: relative;
+      margin: 1em 1em;
+      padding: 0.5em 1em;
+      border: solid 3px #95ccff;
+      border-radius: 8px;
+      span {
+        position: absolute;
+        top: -13px;
+        left: 10px;
+        padding: 0 9px;
+        line-height: 1;
+        font-size: 19px;
+        background: #FFF;
+        color: #95ccff;
+        font-weight: bold;
+      }
+      .program {
+        display: inline-block;
+        text-align: center;
+        p {
+          text-align: center;
+          margin: 0;
+          padding: 0;
+        }
+        img {
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}

@@ -54,7 +54,8 @@
    // ウィンドウの位置を整え、表示します。
    popupObj.css({
      "top": offsetTop,
-     "left": offsetLeft
+     "left": offsetLeft,
+     "z-index": 1
    }).show(speed);
 
  }).mouseout(function() {

@@ -8,9 +8,9 @@ header ul {
   header ul li {
     color: #EEEEEE;
     cursor: pointer; }
-
-body {
-  background-color: ivory; }
+  header ul .active {
+    color: #000;
+    font-weight: bold; }
 
 .popup_help_window {
   max-width: 300px;
@@ -24,139 +24,92 @@ body {
   font-weight: bold;
   line-height: 1.5em;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #ccc; }
+  box-shadow: 5px 5px 5px #ccc;
+  z-index: 10; }
 
-.page {
-  background-color: red; }
-  .page .box {
-    visibility: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-    /* 全体のフォント指定 */
-    font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-    /* 色指定・・・要変更 */
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
+.top-content .top-name {
+  font-size: 75px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+.top-content .top-ex {
+  text-align: center; }
+.top-content ul {
+  list-style: none; }
+  .top-content ul li {
+    float: left;
+    width: 25%;
+    padding-top: 3em;
+    color: skyblue;
+    cursor: pointer;
+    text-align: center; }
+    .top-content ul li:hover {
+      color: navy; }
+.top-content .sns_icon ul {
+  text-align: center;
+  padding: 8em 0 0 0; }
+  .top-content .sns_icon ul .icon {
+    font-size: 50px; }
+  .top-content .sns_icon ul a {
+    color: skyblue;
+    margin: 10px; }
+    .top-content .sns_icon ul a:hover {
+      color: navy; }
+
+.portfolio-content {
+  text-align: center; }
+  .portfolio-content .Portfolio_all {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    columns: 3; }
+    .portfolio-content .Portfolio_all .Portfolio_item {
+      padding-top: 10px; }
+      .portfolio-content .Portfolio_all .Portfolio_item .Portfolio_img {
+        height: 15vh; }
+
+.skill-content {
+  text-align: center; }
+  .skill-content .skill-box {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    display: -webkit-flex;
     display: flex;
-    /* 左右中央寄せ */
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    /* 上下中央寄せ */
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    /* 遠近法を利用のため */
-    -moz-perspective: 2000;
-    -webkit-perspective: 2000;
-    -ms-perspective: 2000;
-    perspective: 2000; }
-    .page .box .wrapper .box2 {
-      visibility: hidden;
-      border: solid 0.1px;
-      background-color: navy;
-      -webkit-box-shadow: 0 10px 6px -6px #777;
-      -moz-box-shadow: 0 10px 6px -6px #777;
-      box-shadow: 0 10px 6px -6px #777;
-      align-items: center;
-      z-index: 2; }
-      .page .box .wrapper .box2 .box3 {
-        z-index: 1;
-        visibility: hidden;
-        background-color: white;
-        width: 75vw;
-        height: 75vh;
-        min-height: 75vh;
-        border-radius: 0 30% 0 30%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        /* 左右中央寄せ */
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        /* 上下中央寄せ */
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center; }
-        .page .box .wrapper .box2 .box3 .top-content .top-name {
-          font-size: 75px;
-          font-weight: bold;
-          text-align: center;
-          padding: 0;
-          margin: 0; }
-        .page .box .wrapper .box2 .box3 .top-content .top-ex {
-          text-align: center; }
-        .page .box .wrapper .box2 .box3 .top-content ul {
-          list-style: none; }
-          .page .box .wrapper .box2 .box3 .top-content ul li {
-            float: left;
-            width: 25%;
-            padding-top: 3em;
-            color: skyblue;
-            cursor: pointer;
-            text-align: center; }
-            .page .box .wrapper .box2 .box3 .top-content ul li:hover {
-              color: navy; }
-        .page .box .wrapper .box2 .box3 .top-content .sns_icon ul {
-          text-align: center;
-          padding: 8em 0 0 0; }
-          .page .box .wrapper .box2 .box3 .top-content .sns_icon ul .icon {
-            font-size: 50px; }
-          .page .box .wrapper .box2 .box3 .top-content .sns_icon ul a {
-            color: skyblue;
-            margin: 10px; }
-            .page .box .wrapper .box2 .box3 .top-content .sns_icon ul a:hover {
-              color: navy; }
-      .page .box .wrapper .box2 .skill-content {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center; }
+    .skill-content .skill-box > div {
+      width: 25%;
+      text-align: center;
+      position: relative;
+      margin: 1em 1em;
+      padding: 0.5em 1em;
+      border: solid 3px #95ccff;
+      border-radius: 8px; }
+      .skill-content .skill-box > div span {
+        position: absolute;
+        top: -13px;
+        left: 10px;
+        padding: 0 9px;
+        line-height: 1;
+        font-size: 19px;
+        background: #FFF;
+        color: #95ccff;
+        font-weight: bold; }
+      .skill-content .skill-box > div .program {
+        display: inline-block;
         text-align: center; }
-        .page .box .wrapper .box2 .skill-content .skill-box {
-          -webkit-flex-direction: column;
-          flex-direction: column;
-          width: 100%;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-flex-direction: row;
-          flex-direction: row;
-          justify-content: center; }
-          .page .box .wrapper .box2 .skill-content .skill-box > div {
-            width: 25%;
-            text-align: center;
-            position: relative;
-            margin: 1em 1em;
-            padding: 0.5em 1em;
-            border: solid 3px #95ccff;
-            border-radius: 8px; }
-            .page .box .wrapper .box2 .skill-content .skill-box > div span {
-              position: absolute;
-              top: -13px;
-              left: 10px;
-              padding: 0 9px;
-              line-height: 1;
-              font-size: 19px;
-              background: #FFF;
-              color: #95ccff;
-              font-weight: bold; }
-            .page .box .wrapper .box2 .skill-content .skill-box > div .program {
-              display: inline-block;
-              text-align: center; }
-              .page .box .wrapper .box2 .skill-content .skill-box > div .program p {
-                text-align: center;
-                margin: 0;
-                padding: 0; }
-              .page .box .wrapper .box2 .skill-content .skill-box > div .program img {
-                vertical-align: top; }
+        .skill-content .skill-box > div .program p {
+          text-align: center;
+          margin: 0;
+          padding: 0; }
+        .skill-content .skill-box > div .program img {
+          vertical-align: top; }
 
-.page .box .wrapper .active {
-  visibility: visible;
-  z-index: 2; }
-  .page .box .wrapper .active .active {
-    visibility: visible;
-    z-index: 2; }
+.contact-content .contact-form .btn {
+  text-align: center; }
 
 @media (min-width: 1025px) {
   header {
@@ -199,5 +152,61 @@ body {
     -webkit-flex-direction: column;
     flex-direction: column;
     columns: 2; } }
+body {
+  background-color: ivory; }
+
+.page .box {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* 全体のフォント指定 */
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  /* 色指定・・・要変更 */
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 左右中央寄せ */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /* 上下中央寄せ */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .page .box .wrapper .box2 {
+    visibility: hidden;
+    border: solid 0.1px;
+    background-color: navy;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    align-items: center; }
+    .page .box .wrapper .box2 .box3 {
+      visibility: hidden;
+      background-color: white;
+      width: 75vw;
+      height: 75vh;
+      min-height: 75vh;
+      border-radius: 0 30% 0 30%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      /* 左右中央寄せ */
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      /* 上下中央寄せ */
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+
+.page .box .wrapper .active {
+  visibility: visible; }
+  .page .box .wrapper .active .active {
+    visibility: visible; }
 
 /*# sourceMappingURL=portfolio.css.map */

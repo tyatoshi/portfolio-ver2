@@ -1,0 +1,53 @@
+@media (max-width: 1025px) {
+  .page {
+    header {
+      ul {
+        padding-top: 20px;
+        writing-mode: lr-tb;
+        position: fixed;
+        width: 100%;
+        li {
+          text-align: center;
+          float: left;
+          width: 20%;
+          padding-top: 10px;
+          font-size: 25px;
+        }
+      }
+    }
+    .box {
+      .wrapper {
+        .box2 {
+          .box3 {
+            .top-content {
+              -ms-writing-mode: tb-rl;
+              writing-mode: vertical-rl;
+              -webkit-text-orientation: upright;
+            }
+            .profile-content {
+              -ms-writing-mode: tb-rl;
+              writing-mode: vertical-rl;
+              -webkit-text-orientation: upright;
+            }
+            .skill-content {
+              .skill-box {
+                @include flex-direction(column);
+                >div {
+                  width: 80%;
+                  text-align: center;
+                }
+              }
+            }
+            .portfolio-content {
+              text-align: center;
+              width: 100%;
+              @include flex-direction(column);
+              columns: 2;
+              .Portfolio_item {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

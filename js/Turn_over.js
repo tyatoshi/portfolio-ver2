@@ -2,7 +2,6 @@
   var action = "active animate__animated animate__slideInDown"
 
    var icon_name = $(this).attr("id");
-   console.log(icon_name);
    if (icon_name === "h-top") {
      $(".top").addClass(action);
      $(".profile").removeClass(action);

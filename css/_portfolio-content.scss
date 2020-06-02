@@ -1,0 +1,13 @@
+.portfolio-content {
+  text-align: center;
+  .Portfolio_all {
+    @include flex-direction(column);
+    columns: 3;
+    .Portfolio_item {
+      padding-top: 10px;
+      .Portfolio_img {
+        height: 15vh;
+      }
+    }
+  }
+}

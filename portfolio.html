@@ -8,17 +8,18 @@
   <meta name="keywords" content="Ruby, Web, デザイン, デザイナー, ポートフォリオ, Web制作">
   <link rel="stylesheet" href="css/portfolio.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
 
 <body>
   <div class="page">
     <header>
       <ul>
-        <li id="h-top" class="Turn_over">Ｔｏｐ</li>
-        <li id="h-profile" class="Turn_over">Ｐｒｏｆｉｌｅ</li>
-        <li id="h-skill" class="Turn_over">Ｓｋｉｌｌ</li>
-        <li id="h-portfolio" class="Turn_over">Ｐｏｒｔｆｏｌｉｏ</li>
-        <li id="h-contact" class="Turn_over">Ｃｏｎｔａｃｔ</li>
+        <li id="h-top" class="Turn_over h h-1 active">Ｔｏｐ</li>
+        <li id="h-profile" class="Turn_over h h-2">Ｐｒｏｆｉｌｅ</li>
+        <li id="h-skill" class="Turn_over h h-3">Ｓｋｉｌｌ</li>
+        <li id="h-portfolio" class="Turn_over h h-4">Ｐｏｒｔｆｏｌｉｏ</li>
+        <li id="h-contact" class="Turn_over h h-5">Ｃｏｎｔａｃｔ</li>
       </ul>
     </header>
     <div class="top box">
@@ -30,10 +31,10 @@
               <p class="top-ex">Ｗｅｂデザイナー</p>
               <p class="top-ex">財務アドバイザー</p>
               <ul>
-                <li id="h-profile" class="Turn_over">Ｐｒｏｆｉｌｅ</li>
-                <li id="h-skill" class="Turn_over">Ｓｋｉｌｌ</li>
-                <li id="h-portfolio" class="Turn_over">Ｐｏｒｔｆｏｌｉｏ</li>
-                <li id="h-contact" class="Turn_over">Ｃｏｎｔａｃｔ</li>
+                <li id="h-profile" class="Turn_over h">Ｐｒｏｆｉｌｅ</li>
+                <li id="h-skill" class="Turn_over h">Ｓｋｉｌｌ</li>
+                <li id="h-portfolio" class="Turn_over h">Ｐｏｒｔｆｏｌｉｏ</li>
+                <li id="h-contact" class="Turn_over h">Ｃｏｎｔａｃｔ</li>
               </ul>
               <div class="sns_icon">
                 <ul>
@@ -120,17 +121,10 @@
             <div class="box3 portfolio">
               <div class="portfolio-content">
                 <h3>Ｐｏｒｔｆｏｌｉｏ</h3>
-                <div class="Portfolio_item">
-                  <a href="https://zaiko-app.herokuapp.com/" target="_blank" class="button-contact"><img class="Portfolio_img" src="img/zaikoapp-min.PNG" width="150" height="150" /></i></a>
-                  <p class="Portfolio_img_title">ＺａｉｋｏＡｐｐ</p>
-                </div>
-                <div class="Portfolio_item">
-                  <a href="https://zaiko-app.herokuapp.com/" target="_blank" class="button-contact"><img class="Portfolio_img" src="img/zaikoapp-min.PNG" width="150" height="150" /></i></a>
-                  <p class="Portfolio_img_title">ＺａｉｋｏＡｐｐ</p>
-                </div>
-                <div class="Portfolio_item">
-                  <a href="https://zaiko-app.herokuapp.com/" target="_blank" class="button-contact"><img class="Portfolio_img" src="img/zaikoapp-min.PNG" width="150" height="150" /></i></a>
-                  <p class="Portfolio_img_title">ＺａｉｋｏＡｐｐ</p>
+                <div class="Portfolio_all">
+                  <div class="Portfolio_item">
+                    <a href="https://zaiko-app.herokuapp.com/" target="_blank" class="button-contact"><img class="Portfolio_img" src="img/zaikoapp-min.PNG" width="150" height="150" /></i></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -139,7 +133,18 @@
         <div class="box">
           <div class="box2 contact">
             <div class="box3 contact">
-              top
+              <div class="contact-content">
+                <h3 class="contact-title">Ｃｏｎｔａｃｔ</h3>
+                <form class="contact-form form-group" action="confirmation.php" method="post">
+                  <div class="name-label">お名前</div>
+                  <input type="text " name="name" size="50" value="" class="form-control" />
+                  <div class="email-label">メールアドレス</div>
+                  <input type="text" name="mail" size="50" value="" class="form-control" />
+                  <div class="content-label">コメント</div>
+                  <div><textarea name="inquiry" class="form-control"></textarea></div>
+                  <div><input type="submit" value="送信" class="btn btn-primary mt-3"/></div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -156,6 +161,7 @@
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/pop-window.js"></script>
   <script src="js/Turn_over.js"></script>
+  <script src="js/active-add.js"></script>
 </body>
 
 </html>
