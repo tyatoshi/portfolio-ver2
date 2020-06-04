@@ -11,7 +11,7 @@
           float: left;
           width: 20%;
           padding-top: 10px;
-          font-size: 25px;
+          font-size: 20px;
         }
       }
     }
@@ -23,6 +23,20 @@
               -ms-writing-mode: tb-rl;
               writing-mode: vertical-rl;
               -webkit-text-orientation: upright;
+              .top-index {
+                ul {
+                  li {
+                    height: 15vh;
+                    padding: 0 25px 0 25px;
+                    font-size: 21px;
+                  }
+                }
+              }
+              .sns_icon {
+                ul {
+                  padding: 0;
+                }
+              }
             }
             .profile-content {
               -ms-writing-mode: tb-rl;
@@ -32,6 +46,7 @@
             .skill-content {
               .skill-box {
                 @include flex-direction(column);
+                transform: translate(8%, 0%);
                 >div {
                   width: 80%;
                   text-align: center;
@@ -39,11 +54,10 @@
               }
             }
             .portfolio-content {
-              text-align: center;
-              width: 100%;
-              @include flex-direction(column);
-              columns: 2;
-              .Portfolio_item {}
+              .Portfolio_all {
+                padding: 10px 0 10px 0;
+                .Portfolio_item {}
+              }
             }
           }
         }

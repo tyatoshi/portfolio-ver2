@@ -108,8 +108,13 @@ header ul {
         .skill-content .skill-box > div .program img {
           vertical-align: top; }
 
-.contact-content .contact-form .btn {
+.contact-content {
   text-align: center; }
+  .contact-content .contact-form {
+    padding: 20px 0 20px 0; }
+    .contact-content .contact-form .label {
+      text-align: left;
+      padding: 10px 0 10px 0; }
 
 @media (min-width: 1025px) {
   header {
@@ -131,27 +136,30 @@ header ul {
       float: left;
       width: 20%;
       padding-top: 10px;
-      font-size: 25px; }
+      font-size: 20px; }
   .page .box .wrapper .box2 .box3 .top-content {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     -webkit-text-orientation: upright; }
+    .page .box .wrapper .box2 .box3 .top-content .top-index ul li {
+      height: 15vh;
+      padding: 0 25px 0 25px;
+      font-size: 21px; }
+    .page .box .wrapper .box2 .box3 .top-content .sns_icon ul {
+      padding: 0; }
   .page .box .wrapper .box2 .box3 .profile-content {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     -webkit-text-orientation: upright; }
   .page .box .wrapper .box2 .box3 .skill-content .skill-box {
     -webkit-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    transform: translate(8%, 0%); }
     .page .box .wrapper .box2 .box3 .skill-content .skill-box > div {
       width: 80%;
       text-align: center; }
-  .page .box .wrapper .box2 .box3 .portfolio-content {
-    text-align: center;
-    width: 100%;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    columns: 2; } }
+  .page .box .wrapper .box2 .box3 .portfolio-content .Portfolio_all {
+    padding: 10px 0 10px 0; } }
 body {
   background-color: ivory; }
 
